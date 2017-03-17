@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html manifest="scouting.manifest">
+
+	<head>
+
+	
+	
+	
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <link rel="apple-touch-icon" href="icon.png"/>
+    <link rel="apple-touch-startup-image" href="splash.png" />
+    <link rel="stylesheet" href="scoutingstyle.css" type="text/css" media="screen, mobile" title="main" charset="utf-8">
+    
+    
+	
+	<center><img src="splash.png" /></center>
+	
+	</head>
+	
+	<body>
+		<div class="FullWidth">
+			<center>
+			<form name="myForm" id="myForm" action="mailto:4130scouting@gmail.com?subject=scoutingDataiPhone" method="post" enctype="text/plain">
+				<br><br><br>
+				
+				
+				<h2><u>Build Data</u></h2><br>
+				Team Number:<br>
+				<input type="number" name="TeamNum" id="TeamNum" value="0"><br><br>
+				Climbing :<br>
+				<input type="radio" name="Climbing" value="Yes" id="Climbing" checked="checked"> Yes<br>
+  				<input type="radio" name="Climbing" value="No" id="Climbing"> No<br><br>
+  				When Do You Start:<br>
+				<input type="number" name="StartClimb" id="StartClimb" value="0"><br><br>
+  				How Long Does It Take:<br>
+				<input type="number" name="ClimbTime" id="ClimbTime" value="0"><br><br>
+				Drive Train Type:<br>
+				<input type="text" name="DriveTrain" id="DriveTrain" size="30"><br><br>
+				How Many Fuel Can You Hold:<br>
+				<input type="number" name="Hopper" id="Hopper" value="0"><br><br>
+				Speed (FPS):<br>
+				<input type="number" name="FPS" id="FPS" value="0"><br><br>
+  				
+  				
+				<h2><u>Auton</u></h2><br>
+				Can you shoot in the high goal, low goal, or neither:<br>
+				<select size="12" name="AutonScoreFuel" id="AutonScoreFuel">
+				<option value="None" selected="selected">None</option>
+				<option value="High">High</option>
+				<option value="Low">Low</option>
+				</select><br><br>
+				How Many Can You Shoot?:<br>
+				<input type="number" name="AutonFuelCount" id="AutonFuelCount" value="0"><br><br>
+				Vision Implementation for Shooting:<br>
+				<input type="radio" name="AVIS" value="Yes" id="AVIS" checked="checked"> Yes<br>
+  				<input type="radio" name="AVIS" value="No" id="AVIS"> No<br><br>
+  				Gears:<br>
+				<input type="radio" name="AutonGears" value="Yes" id="AutonGears" checked="checked"> Yes<br>
+  				<input type="radio" name="AutonGears" value="No" id="AutonGears"> No<br><br>
+  				Vision Implementation for Gears:<br>
+				<input type="radio" name="AVIG" value="Yes" id="AVIG" checked="checked"> Yes<br>
+  				<input type="radio" name="AVIG" value="No" id="AVIG"> No<br><br>
+				<br><br><hr>
+				
+				
+				<h2><u>Teleop</u></h2><br>
+  				Can you shoot in the high goal, low goal, or neither:<br>
+				<select size="12" name="TeleopScoreFuel" id="TeleopScoreFuel">
+				<option value="None" selected="selected">None</option>
+				<option value="High">High</option>
+				<option value="Low">Low</option>
+				</select><br><br>
+				Vision Implementation for Shooting:<br>
+				<input type="radio" name="TVIS" value="Yes" id="TVIS" checked="checked"> Yes<br>
+  				<input type="radio" name="TVIS" value="No" id="TVIS"> No<br><br>
+  				Gears:<br>
+				<input type="radio" name="TeleopGears" value="Yes" id="TeleopGears" checked="checked"> Yes<br>
+  				<input type="radio" name="TeleopGears" value="No" id="TeleopGears"> No<br><br>
+  				Vision Implementation for Gears:<br>
+				<input type="radio" name="TVIG" value="Yes" id="TVIG" checked="checked"> Yes<br>
+  				<input type="radio" name="TVIG" value="No" id="TVIG"> No<br><br>
+  				Gears Off Ground?:<br>
+				<input type="radio" name="Ground" value="Yes" id="Ground" checked="checked"> Yes<br>
+  				<input type="radio" name="Ground" value="No" id="Ground"> No<br><br>
+				<br><br><hr>
+				
+				
+				<h2><u>Other</u></h2><br>
+				Main Design Focus:<br>
+				<input type="text" name="DFocus" id="DFocus" size="30"><br><br>
+				Main Match Focus Options:<br>
+				<input type="checkbox" name="MFocus" value="Gears" id="MFocus"> Gears<br>
+				<input type="checkbox" name="MFocus" value="Fuel" id="MFocus"> Fuel<br>
+				<input type="checkbox" name="MFocus" value="Defense" id="MFocus"> Defense<br><br>
+				Comments:<br>
+				<input type="text" name="Comments" id="Comments" size="30"><br><br>
+				
+				<input type="Reset" value="Reset"><br><br>
+				<div class="results"></div>
+			</form>
+			
+			
+			
+			<button onclick="myFunction()">Submit</button><br><br><br>
+			<p></p>
+			
+			
+
+			<script>
+			function myFunction() {
+    			var TeamNum = document.getElementById("TeamNum").value;
+    			var Climbing = document.getElementById("Climbing").value;
+    			var StartClimb = document.getElementById("StartClimb").value;
+    			var ClimbTime = document.getElementById("ClimbTime").value;
+    			var DriveTrain = document.getElementById("DriveTrain").value;
+    			var Hopper = document.getElementById("Hopper").value;
+    			var FPS = document.getElementById("FPS").value;
+    			var AutonScoreFuel = document.getElementById("AutonScoreFuel").value;
+    			var AutonFuelCount = document.getElementById("AutonFuelCount").value;
+    			var AVIS = document.getElementById("AVIS").value;
+    			var AutonGears = document.getElementById("AutonGears").value;
+    			var AVIG = document.getElementById("AVIG").value;
+    			var TeleopScoreFuel = document.getElementById("TeleopScoreFuel").value;
+    			var TVIS = document.getElementById("TVIS").value;
+    			var TeleopGears = document.getElementById("TeleopGears").value;
+    			var TVIG = document.getElementById("TVIG").value;
+    			var Ground = document.getElementById("Ground").value;
+    			var DFocus = document.getElementById("DFocus").value;
+    			var MFocus = document.getElementById("MFocus").value;
+    			var Comments = document.getElementById("Comments").value;
+				var link = "mailto:4130scouting@gmail.com"
+     				+ "?cc="
+    				+ "&subject=scoutingDataAndroid"
+     				+ "&body=" + "TeamNum=\"" + TeamNum + "\"" + "\\~\\" + "Climbing=\"" + Climbing + "\"" + "\\~\\" + "StartClimb=\"" + StartClimb + "\"" + "\\~\\" + "ClimbTime=\"" + ClimbTime + "\"" + "\\~\\" + "DriveTrain=\"" + DriveTrain + "\"" + "\\~\\" + "Hopper=\"" + Hopper + "\"" + "\\~\\" + "FPS=\"" + FPS + "\"" + "\\~\\" + "AutonScoreFuel=\"" + AutonScoreFuel + "\"" + "\\~\\" + "AutonFuelCount=\"" + AutonFuelCount + "\"" + "\\~\\" + "AVIS=\"" + AVIS + "\"" + "\\~\\" + "AutonGears=\"" + AutonGears + "\"" + "\\~\\" + "AVIG=\"" + AVIG + "\"" + "\\~\\" + "TeleopScoreFuel=\"" + TeleopScoreFuel + "\"" + "\\~\\" + "TVIS=\"" + TVIS + "\"" + "\\~\\" + "TeleopGears=\"" + TeleopGears + "\"" + "\\~\\" + "TVIG=\"" + TVIG + "\"" + "\\~\\" + "Ground=\"" + Ground + "\"" + "\\~\\" + "DFocus=\"" + DFocus + "\"" + "\\~\\" + "MFocus=\"" + MFocus + "\"" + "\\~\\" + "Comments=\"" + Comments + "\""
+     			;
+     			window.location.href = link;
+				}
+			</script>
+			</center>
+		</div>
+			
+	</body>
+	
+</html>

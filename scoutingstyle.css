@@ -1,0 +1,29 @@
+h1 {
+    padding: 0px;
+    margin: 0px;
+}
+
+h2 {
+	padding: 0px;
+    margin: 0px;
+	font-size: 200%;
+}
+div.fullWidth {
+    width: 640px; 
+    height: 960px;
+}
+body {
+ 	transform: scale(1.0);
+	transform-origin: 0 0;
+}
+html, body {
+   	height: 100%;
+	overflow-x: hidden;
+}
+div.wrap {height:100%; overflow:hidden;}
+.radioLeft
+{
+    text-align:left;
+}
+
+	

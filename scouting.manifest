@@ -1,0 +1,14 @@
+CACHE MANIFEST
+
+CACHE:
+/index.html
+/offline.html
+/scoutingstyle.css
+/icon.png
+/splash.png
+/positions.png
+
+FALLBACK:
+/ offline.html
+
+
