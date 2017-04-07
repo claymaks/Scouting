@@ -10,5 +10,6 @@ CACHE:
 
 FALLBACK:
 / offline.html
+#update
 
 
